@@ -1,0 +1,29 @@
+addNode(TreeNode<String> root, String code, String letter)
+ 
+ if code is of length 1 and is "." 
+	create a left child of root
+	return
+ else if code is of length 1 and is "-" 
+	create a right child of root
+	return
+ else if code is > 1 and first char is "." 
+	root = left child
+ 	code equal to code without first char
+ else if code > 1 and first char is "-"
+ 	root = right child
+	code equal to code without first char
+ call addNode recursively
+
+  	
+fetchNode(TreeNode<String> root, String code)
+  if code is of length 1 and is "." 
+	return left child of root 
+ else if code is of length 1 and is "-" 
+	return right child of root
+ else if code is > 1 and first char is "." 
+	root = left child
+ 	code equal to code without first char
+ else if code > 1 and first char is "-"
+ 	root = right child
+	code equal to code without first char
+ call fetchNode recursively
